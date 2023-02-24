@@ -29,7 +29,7 @@
                     required
                   />
                 </div>
-                <button type="submit" id="purchase-button">구입</button>
+                <button type="submit" id="purchase-button" class="main-button">구입</button>
               </div>
               <p class="error-message" id="purchase-input-error"></p>
             </form>
@@ -103,7 +103,7 @@
                 <p class="error-message" id="game-number-error">
                   1~45 사이의 숫자를 입력해 주세요.
                 </p>
-                <button type="submit">결과 확인하기</button>
+                <button type="submit" class="main-button">결과 확인하기</button>
               </form>
             </div>
           </div>
@@ -111,7 +111,7 @@
       </main>
       <dialog class="result-modal">
         <div class="close-icon-container">
-          <div class="close-icon" tabindex="1">&#10005;</div>
+          <button class="close-icon">&#10005;</button>
         </div>
         <h2 class="align-center">🏆 당첨 통계 🏆</h2>
         <table>
@@ -151,7 +151,7 @@
           </tbody>
         </table>
         <h3 class="align-center" id="profit-rate"></h3>
-        <button id="restart-button">다시 시작하기</button>
+        <button id="restart-button" class="main-button">다시 시작하기</button>
       </dialog>
       <footer>
         <p>Copyright 2023. woowacourse</p>

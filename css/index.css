@@ -110,27 +110,30 @@ input::-webkit-inner-spin-button {
 }
 
 button {
+  outline: 0;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.main-button {
   padding: var(--spacing-2);
   background: var(--primary-blue);
   line-height: 16px;
   color: var(--white);
   border: 1px solid var(--primary-blue);
   border-radius: var(--spacing-1);
-  outline: 0;
-  cursor: pointer;
-  transition: all 0.1s ease-in-out;
 }
 
-button:hover {
+.main-button:hover {
   background: var(--dark-blue-2);
   border-color: var(--dark-blue-1);
 }
 
-button:active {
+.main-button:active {
   background: var(--dark-blue-1);
 }
 
-button:focus {
+.main-button:focus {
   background: var(--dark-blue-2);
   border-color: var(--dark-blue-1);
   box-shadow: 0 0 0 3px rgba(112, 125, 204, 0.5);
@@ -258,11 +261,6 @@ legend {
   cursor: pointer;
 }
 
-.result-modal .close-icon {
-  text-align: right;
-  cursor: pointer;
-}
-
 table {
   width: 100%;
   border-collapse: collapse;
@@ -290,6 +288,7 @@ th {
   right: 0;
   display: inline-block;
   padding: var(--spacing-1) var(--spacing-2);
+  background: transparent;
   font-size: var(--subtitle-font-size);
   color: var(--gray-3);
   border: 3px solid transparent;
@@ -307,7 +306,7 @@ th {
   color: var(--black);
 }
 
-.result-modal button {
+.result-modal .main-button {
   width: 100%;
 }
 
