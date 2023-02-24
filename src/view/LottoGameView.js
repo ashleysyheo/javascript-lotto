@@ -51,7 +51,7 @@ class LottoGameView {
     lottoList.forEach((numbers) => {
       const USER_LOTTO = document.createElement('li');
       const LOTTO_ICON = document.createElement('p');
-      LOTTO_ICON.textContent = StaticValue.LOTTO_ICON;
+      LOTTO_ICON.textContent = Message.LOTTO_ICON;
       LOTTO_ICON.classList.add('lotto-icon');
 
       const LOTTO_NUMBERS = document.createElement('p');
