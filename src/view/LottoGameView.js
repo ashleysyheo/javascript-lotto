@@ -47,13 +47,10 @@ class LottoGameView {
 
   showUserLottoList(lottoList) {
     ViewUtils.resetInnerHTML(this.userLottoContainer);
-
-    lottoList.forEach((numbers) => {
-      this.userLottoContainer.insertAdjacentHTML(
-        'beforeend',
-        generateUserLottoNumbersElement(numbers)
-      );
-    });
+    const USER_LOTTO_ELEMENTS = lottoList.map((numbers) =>
+      generateUserLottoNumbersElement(numbers)
+    );
+    this.userLottoContainer.insertAdjacentHTML('beforeend', USER_LOTTO_ELEMENTS.join(''));
   }
 
   addGameNumbersSubmitEvent(callback) {
