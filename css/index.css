@@ -64,6 +64,10 @@ main {
   align-items: center;
 }
 
+form {
+  -webkit-appearance: none;
+}
+
 .game-container {
   position: relative;
   width: 420px;
