@@ -187,7 +187,7 @@ button:focus {
   list-style: none;
 }
 
-.user-lotto {
+.user-lotto-container li {
   display: flex;
   align-items: center;
   gap: var(--spacing-2);

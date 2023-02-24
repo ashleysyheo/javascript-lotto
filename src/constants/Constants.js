@@ -53,6 +53,7 @@ const Prize = Object.freeze({
 
 const Message = Object.freeze({
   purchaseCount: (count) => `총 ${count}개를 구매했습니다.`,
+  LOTTO_ICON: '🎟️',
   matchCount: (count) =>  `${count}개`,
   profitRateResult: (profitRate) => `당신의 총 수익률은 ${formatNumber(profitRate)}% 입니다.`,
 });

@@ -1,6 +1,5 @@
-import { Message } from '../constants/Constants.js';
+import { StaticValue, Message } from '../constants/Constants.js';
 import { $, $$ } from '../utils/DomSelector.js';
-import generateUserLottoNumbersElement from '../utils/Template.js';
 import ViewUtils from '../utils/ViewUtils.js';
 
 class LottoGameView {
@@ -47,13 +46,23 @@ class LottoGameView {
 
   showUserLottoList(lottoList) {
     ViewUtils.resetInnerHTML(this.userLottoContainer);
+    const CONTAINER = document.createDocumentFragment();
 
     lottoList.forEach((numbers) => {
-      this.userLottoContainer.insertAdjacentHTML(
-        'beforeend',
-        generateUserLottoNumbersElement(numbers)
-      );
+      const USER_LOTTO = document.createElement('li');
+      const LOTTO_ICON = document.createElement('p');
+      LOTTO_ICON.textContent = StaticValue.LOTTO_ICON;
+      LOTTO_ICON.classList.add('lotto-icon');
+
+      const LOTTO_NUMBERS = document.createElement('p');
+      LOTTO_NUMBERS.textContent = numbers.join(StaticValue.PRINT_SEPARATOR);
+      LOTTO_NUMBERS.classList.add('lotto-numbers');
+
+      USER_LOTTO.append(LOTTO_ICON, LOTTO_NUMBERS);
+      CONTAINER.appendChild(USER_LOTTO);
     });
+
+    this.userLottoContainer.appendChild(CONTAINER);
   }
 
   addGameNumbersSubmitEvent(callback) {
