@@ -39,6 +39,7 @@ class LottoGameView {
   showUserLottos(purchaseCount, userLottoList) {
     this.showUserLottoPurchaseCount(purchaseCount);
     this.showUserLottoList(userLottoList);
+    ViewUtils.focusElement(this.winningNumbersInputs[0]);
   }
 
   showUserLottoPurchaseCount(count) {
